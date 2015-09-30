@@ -38,7 +38,6 @@
     }
 
     self.render = function(containerElement) {
-      console.log('render');
       $(containerElement).append(mapContainer);
       createMap();
     }
@@ -53,7 +52,6 @@
     }
 
     self.onCalculatedValueChanged = function(settingName, newValue) {
-      console.log('onCalculatedValueChanged, '+settingName+'='+newValue);
       if(settingName in position) {
         position[settingName] = newValue;
       }
