@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- Dev Version links to full versions (non-minified) of javascript and css files -->
 <html>
 <head>
@@ -38,6 +38,7 @@
                 "plugins/freeboard/freeboard.datasources.js",
                 "plugins/freeboard/freeboard.widgets.js",
                 "plugins/freeboard/gmap.widget.js",
+                "plugins/freeboard/dronlist.widget.js",
                 "examples/plugin_example.js",
 
                 // *** Load more plugins here ***
@@ -48,6 +49,11 @@
                         freeboard.initialize(true);
                     });
                 });
+
+        function changeFunction(select) {
+            var selectedOption = select.options[select.selectedIndex];
+            console.log("selected value was changed on " + selectedOption.value);
+        }
     </script>
 </head>
 <body>
